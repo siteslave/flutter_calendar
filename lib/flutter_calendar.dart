@@ -86,7 +86,7 @@ class _CalendarState extends State<Calendar> {
 
     if (widget.showTodayAction) {
       leftInnerIcon = new InkWell(
-        child: new Text('Today'),
+        child: new Text('วันนี้', style: TextStyle(fontSize: 18.0)),
         onTap: resetToToday,
       );
     } else {
@@ -101,7 +101,7 @@ class _CalendarState extends State<Calendar> {
         new Text(
           displayMonth,
           style: new TextStyle(
-            fontSize: 20.0,
+            fontSize: 18.0,
           ),
         ),
         rightInnerIcon ?? new Container(),
@@ -185,17 +185,15 @@ class _CalendarState extends State<Calendar> {
 
     if (isExpanded) {
       final TextStyle body1StyleDisabled = body1Style.copyWith(
-        color: Color.fromARGB(
-          100, 
-          body1Style.color.red, 
-          body1Style.color.green, 
-          body1Style.color.blue,
-        )
-      );
+          color: Color.fromARGB(
+        100,
+        body1Style.color.red,
+        body1Style.color.green,
+        body1Style.color.blue,
+      ));
 
-      dateStyles = monthStarted && !monthEnded
-          ? body1Style
-          : body1StyleDisabled;
+      dateStyles =
+          monthStarted && !monthEnded ? body1Style : body1StyleDisabled;
     } else {
       dateStyles = body1Style;
     }
