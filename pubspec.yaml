@@ -12,6 +12,10 @@ dependencies:
     sdk: flutter
   intl: ^0.15.0
   tuple: ^1.0.1
+  
+  flutter_localizations:
+    sdk: flutter
+    
   date_utils: 
     git:
       url: git://github.com/siteslave/date_utils.git
